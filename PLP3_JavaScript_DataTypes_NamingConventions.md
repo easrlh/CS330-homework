@@ -21,12 +21,17 @@ Note #1: The data type of your variable is decided by how you code the right han
 
 Note #2: When performing math operators on ints and floats, the result follows widening conversion. This means that the resulting value will be a float and not a string. Example: `4 + 2.1` returns `6.1`.
 
-Note #3: Arrays in JavaScript can hold primitive data types, objects, methods, you name it. The elements do not have to match in type. Some examples: 
+Note #3: Arrays in JavaScript can hold primitive data types, objects, methods, you name it. The elements do not have to match in type. Some examples of array instantiation: 
 - `var array_name = [item1, item2, ...];`
 - `var fruits = ["Banana", 5, "Apple", "Mango"];`
 - `var cars = new Array("Saab", "Volvo", "BMW");`
 - `var person = ["John", "Doe", 46];`
 - `var person = {firstName:"John", lastName:"Doe", age:46};` (In this example, `person.firstName` returns John)
+
+Some examples of assignment to indexes of an array:
+
 - `myArray[0] = Date.now;` 
 - `myArray[1] = myFunction;`
 - `myArray[2] = myCars;` where `myCars` is another array
+
+//this assignment is not quite done!
