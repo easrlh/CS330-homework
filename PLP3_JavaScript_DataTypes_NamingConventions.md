@@ -34,4 +34,24 @@ Some examples of assignment to indexes of an array:
 - `myArray[1] = myFunction;`
 - `myArray[2] = myCars;` where `myCars` is another array
 
-//this assignment is not quite done!
+### Extra Discussion Questions ###
+1) Are the naming conventions for JS enforced by the compiler/interpreter, or are they just standards in the community? 
+
+The naming conventions are not enforced by the interpretor. They are solely community standards.
+
+2) Is JavaScript statically or dynamically typed?
+
+JavaScript is dynamically typed, meaning that types can change at run time. To give a small description over static vs. dynamic typing from [here](https://www.quora.com/Is-JavaScript-a-dynamically-typed-or-statically-typed-language):  
+>The idea of dynamic types is that makes code flexible, i.e. if you’ve got a function which returns a number, you don’t actually have to return a number, you can return anything you like.
+
+>With static types, it’s felt that applying rules to what types can be used is a benefit. The idea being that if you’ve got a function which accepts an int, you don’t need to check if an int has been passed to it, as the compiler won’t let anything else happen."
+
+\[[Some general tips on navigating JS types!](https://medium.com/@xiaoyunyang/javascript-is-a-loosely-typed-language-meaning-you-dont-have-to-specify-what-type-of-information-137408d54fc7)\]
+
+4. If you put this line (or something similar) in a program and try to print x, what does it do? If it
+doesn't compile, why? Is there something you can do to make it compile?
+x = "5" + 6
+
+5. Describe the limitations (or lack thereof) of your programming language as they relate to the coding portion of the assignment (adding ints and floats, storing different types in lists, etc). Are there other restrictions or pitfalls that the documentation mentions that you need to be aware of?
+
+6. How do type conversions work in your language? Are the conversions narrowing or widening, and do they work by default or do they have to be declared by the programmer?
