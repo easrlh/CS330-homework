@@ -52,6 +52,9 @@ JavaScript is dynamically typed, meaning that types can change at run time. To g
 doesn't compile, why? Is there something you can do to make it compile?
 x = "5" + 6
 
+The line is interpretted just fine because of JavaScripts lovely weak typing, meaning that there's no compiler enforced correct typing or the need for any casting! x will calculate out to 11, an integer.
+
 5. Describe the limitations (or lack thereof) of your programming language as they relate to the coding portion of the assignment (adding ints and floats, storing different types in lists, etc). Are there other restrictions or pitfalls that the documentation mentions that you need to be aware of?
 
-6. How do type conversions work in your language? Are the conversions narrowing or widening, and do they work by default or do they have to be declared by the programmer?
+There are pros and cons to most aspects of a language. For JavaScript, the pros dance a fine line between being helpful and being confusing. The flexibility of JS with it's typing gives programmers a lot of flexibility, but also can make variables hard to keep track of among other errors that get buried by the lack of type checking.
+
