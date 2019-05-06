@@ -14,10 +14,10 @@ Camel case for variables and functions, and they must start with a lower case le
 - array/list: `var values = ["Corgi", "Husky", "Poodle"];`
 - hash/dictionary: `var h = new HashTable();`
 
-File names should also start with a lowercase letter, global variables in UPPERCASE, and constants (like PI) in UPPERCASE.
+File names should also start with a lowercase letter and global variables and constants (like PI) should be written in UPPERCASE.
 
-(Source 1)[https://www.w3schools.com/js/js_conventions.asp]
-(Source 2)[https://www.tutorialspoint.com/What-characters-are-valid-for-JavaScript-variable-names]
+[Source 1](https://www.w3schools.com/js/js_conventions.asp)
+[Source 2](https://www.tutorialspoint.com/What-characters-are-valid-for-JavaScript-variable-names)
 
 #### Additional JavaScript Data Notes ####
 Note #1: The data type of your variable is decided by how you code the right hand side of the statement, so the type can be changed simply like so: `var carName = "Volvo";` prints a string, Volvo. If later on in the program you code `carName = 5;` JavaScript will allow this and print the 5 as an integer.
