@@ -31,7 +31,7 @@ A function can refer to and call itself. An example from [freeCodeCamp](https://
 
 `function factorial( n ) {`
 
-  if ( n === 1 ) {
+  `if ( n === 1 ) {`
   
     return 1;
     
