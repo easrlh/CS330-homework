@@ -29,17 +29,17 @@ has access. [(Source)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/G
 
 A function can refer to and call itself. An example from [freeCodeCamp](https://medium.freecodecamp.org/recursion-in-javascript-1608032c7a1f):
 
-`function factorial( n ) {
+`function factorial( n ) {`
 
   if ( n === 1 ) {
   
     return 1;
     
-  }
+ ` }`
   
-  return n * factorial( n - 1 );
+  `return n * factorial( n - 1 );`
   
-}`
+`}`
 
 4. Can functions in your language accept multiple parameters? Can they be of different data types?
 
@@ -75,11 +75,11 @@ Here's a code example from [TutorialRepublic](https://www.tutorialrepublic.com/f
 
 `// Displaying individual values`
 
-`alert(all.dividend); // 0utputs: 10`
+`alert(all.dividend); // outputs: 10`
 
-`alert(all.divisor); // 0utputs: 2`
+`alert(all.divisor); // outputs: 2`
 
-`alert(all.quotient); // 0utputs: 5`
+`alert(all.quotient); // outputs: 5`
 
 `</script>`
 
