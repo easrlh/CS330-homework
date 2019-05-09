@@ -1,13 +1,11 @@
 ## CS330: Programming Language Project (PLP) Assignments 5 & 6: Functions, Parameters, and Scope ##
 #### By Eva Lynch ####
-[[Source]](https://www.w3schools.com/js/js_functions.asp)
 
 Being able to write functions that can be called more than once and sent different information each time is a huge part 
 of most programming languages. However, there are a lot of variations in how functions are declared, where they are placed, 
 how they accept parameters and how the function output is returned. Plus, you have to watch out for issues with scope and 
 naming: some languages (e.g. Java) keep variables visible only inside of their own functions, while others (e.g. Perl) will 
-have everything visible globally unless you use the keyword 'my'. In order to find out how your language handles these issues, 
-answer the following questions and write code for each one that demonstrates the answers:
+have everything visible globally unless you use the keyword 'my'. So, how does JavaScript handle functions? Let's find out.
 
 1. What is the syntax for declaring a function in your language?
 
@@ -29,15 +27,19 @@ has access. [(Source)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/G
 
 3. Does your language support recursive functions? If so, write one.
 
-A function can refer to and call itself. There are three ways for a function to refer to itself:
-- the function's name
-- arguments.callee
-- an in-scope variable that refers to the function
-For example, consider the following function definition:
+A function can refer to and call itself. An example from [freeCodeCamp](https://medium.freecodecamp.org/recursion-in-javascript-1608032c7a1f):
 
-`var foo = function bar() {
-   // statements go here
-};`
+`function factorial( n ) {
+
+  if ( n === 1 ) {
+  
+    return 1;
+    
+  }
+  
+  return n * factorial( n - 1 );
+  
+}`
 
 4. Can functions in your language accept multiple parameters? Can they be of different data types?
 
@@ -46,7 +48,40 @@ The types of paramteres are not statically typed, so whatever parameters get pas
 
 5. Can functions in your language return multiple values at the same time?
 
+A function in JavaScript cannot return multiple values. That said, you can get equivalent results if you save the multiple variables you want to return into an array and return that instead!
 
+Here's a code example from [TutorialRepublic](https://www.tutorialrepublic.com/faq/how-to-return-multiple-values-from-a-function-in-javascript.php):
+
+`<script>`
+
+`// Defining function`
+
+`function divideNumbers(dividend, divisor){`
+
+    var quotient = dividend / divisor;
+    
+    var obj = {
+        dividend: dividend,
+        divisor: divisor,
+        quotient: quotient 
+    };
+    return obj;
+    
+`}`
+ 
+`// Store returned value in a variable`
+
+`var all = divideNumbers(10, 2);`
+
+`// Displaying individual values`
+
+`alert(all.dividend); // 0utputs: 10`
+
+`alert(all.divisor); // 0utputs: 2`
+
+`alert(all.quotient); // 0utputs: 5`
+
+`</script>`
 
 6. Declare a variable (say, x) in the main body of your program. Then declare a variable of the same name inside of a loop. 
 Is there a conflict? Is the old variable overwritten or do you now have two variables of the same name?
@@ -69,13 +104,12 @@ to Installing JS in this repo) were `5` and `9`.
 
 7. What if the other x is inside a function?
 
-Engineers at Mozilla had this to say:
+Engineers at [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions) had this to say:
 >Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, 
 but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.
 
 >If you pass an object (i.e. a non-primitive value, such as Array or a user-defined object) as a parameter and the 
 function changes the object's properties, that change is visible outside the function.
-[(Source)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 
 From experience, I would agree. 
 The `var x` inside of the function is independent from the main program's `var x` 
@@ -135,12 +169,39 @@ And with non-primitive types:
 
 8. Can you have variables that are globally accessible? What are the rules for creating them?
 
+Any variable created outside of a function are automatically global. This means that every function of the web page running the javascript can access the variable (which is also includes functions and objects). Something also to be wary on is assigning a value to an undeclared variable. Because you haven't declared the variable inside of the function, it will be automatically assigned as a global variable. [(Source)](https://www.w3schools.com/js/js_scope.asp)
 
+9. Are variables passed by value or by reference?
 
-9. Are variables passed by value or by reference? (Hint: write a function that alters its input, but doesn't return it. 
-Pass it a variable, and see if the alteration is visible in main after you call the function)
+Primitive variables are passed by value and non-primitive tyoes (objects) are passed by reference. This is demonstrated through these code snippets:
 
+`var a = 5`
+`var b = a`
 
+`console.log(a) // returns 5`
+`console.log(b) // returns 5`
+
+`a = 1`
+
+`console.log(a) // returns 1`
+`console.log(b) // returns 5`
+
+This demonstration of primitive type passed exemplifies that the value of a was passed to b in the second line, prompting the creation of a new spot in memory to hold the variable b and it's value (equal to the value of a). 
+
+Now, let's look at what happens when passing non-primitive types:
+
+`var a = [1, 2, 3];`
+`var b = a;`
+
+`console.log(a); //returns [ 1, 2, 3 ]`
+`console.log(b); //returns [ 1, 2, 3 ]`
+
+`b[1] = 10;`
+
+`console.log(a); //returns [ 1, 10, 3 ]`
+`console.log(b); //returns [ 1, 10, 3 ]`
+
+This example demonstrates that the reference of a, which held the value of a, was passed into b on the seocnd line. This means that a and b occupy the same space in memeory and that anything done to a effects the other or vice versa.
 
 10. If you run this code (or the equivalent) in your language, what is the output? What does that tell you about 
 how the language handles assignments?
@@ -151,5 +212,4 @@ how the language handles assignments?
 
 `print a print b`
 
-
-Make your answers as clear as possible, and provide code that shows how you tested the questions and the results that you get.
+*see the answer to discussion question #9*
