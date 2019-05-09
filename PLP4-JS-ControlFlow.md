@@ -10,7 +10,7 @@ What does control flow look like in JavaScript? Read on to find out and look at 
 JavaScript allows for if/else, if/else if/else, for, for/each, while, do/while, and break and continue statements within those.
 Here are some examples and relevent information for these types of statements.
 
-One-condition  if/else  statement (e.g. "if x == 2"):
+#### One-condition if/else statement (e.g. "if x == 2"): #### 
 
  `if (condition) {`
  
@@ -54,7 +54,7 @@ These conditions could have any of the following comparison operators:
 
 `<=` less than or equal to
 
-For loop:
+#### For loop: #### 
 
 `for (statement 1; statement 2; statement 3) {`
   `// code block to be executed`
@@ -68,7 +68,7 @@ Statement 3 is executed (every time) after the code block has been executed.
 
 [(Source)](https://www.w3schools.com/js/js_loop_for.asp)
 
-For/each Loop (Enhanced For loop):
+#### For/each Loop (Enhanced For loop): #### 
 
 `var person = {fname:"John", lname:"Doe", age:25}; // object declaration `
 
@@ -86,7 +86,7 @@ For/each Loop (Enhanced For loop):
 
 (Same source as For Loop)
 
-While Loops:
+#### While Loops: #### 
 
 `var i = 0;`
 
@@ -102,14 +102,14 @@ While Loops:
 
 `console.log(words) // returns The number is 0The number is 1The number is 2 etc.`
 
-Do/While Loop:
+#### Do/While Loop: #### 
 
 `do {`
   `// code block to be executed`
 `}`
 `while (condition);`
 
-Switch-case  statement:
+#### Switch-case  statement: #### 
 
 `switch (expression) {`
 
@@ -131,7 +131,7 @@ Switch-case  statement:
     
 `}`
 
-Break  and  continue  statements:
+#### Break  and  continue  statements: #### 
 
 To review, break statements "jump out" of loops and continue statements "jump over" one iteration in loops.
 
