@@ -11,19 +11,29 @@ JavaScript allows for if/else, if/else if/else, for, for/each, while, do/while, 
 Here are some examples and relevent information for these types of statements.
 
 One-condition  if/else  statement (e.g. "if x == 2"):
+
  `if (condition) {`
+ 
   `statement_1;`
+  
 `} else {`
+
   `statement_2;`
+  
 `}`
 
 and expanded:
 
 `if (condition1) {`
+
   `//  block of code to be executed if condition1 is true`
+  
 `} else if (condition2) {`
+
   `//  block of code to be executed if the condition1 is false and condition2 is true`
+  
 `} else {`
+
   `//  block of code to be executed if the condition1 is false and condition2 is false`
 `}`
 
@@ -63,21 +73,31 @@ For/each Loop (Enhanced For loop):
 `var person = {fname:"John", lname:"Doe", age:25}; // object declaration `
 
 `var text = "";`
+
 `var x;`
+
 `for (x in person) {`
+
   `text += person[x];`
+  
 `}`
 
 `console.log(text) // returns JohnDoe25`
 
-[(Source)](https://www.w3schools.com/js/js_loop_for.asp\)
+(Same source as For Loop)
 
 While Loops:
+
 `var i = 0;`
+
 `var words = [];`
+
 `while (i < 10) { // must contain a loop limiter`
+
   `text += "The number is " + i;`
+  
   `i++; // must change the limiter's variable to avoid a forever loop`
+  
 `}`
 
 `console.log(words) // returns The number is 0The number is 1The number is 2 etc.`
@@ -92,16 +112,23 @@ Do/While Loop:
 Switch-case  statement:
 
 `switch (expression) {`
+
   `case label_1:`
-    `statements_1`
-    `[break;]`
+  
+    statements_1
+    [break;]
+    
   `case label_2:`
-    `statements_2`
-    `[break;]`
-    `...`
+  
+    statements_2
+    [break;]
+    ...
+    
   `default:`
-    `statements_def`
-    `[break;]`
+  
+    statements_def
+    [break;]
+    
 `}`
 
 Break  and  continue  statements:
@@ -126,8 +153,8 @@ This example skips an iteration of the for loop if i === 3.
   `text += "The number is " + i;`
 `}`
 
-[Source 1](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
-[Source 2](https://www.w3schools.com/js/js_break.asp)
+[(Source 1)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+[(Source 2)](https://www.w3schools.com/js/js_break.asp)
 
 2. Does your language use short-circuit evaluation? If so, make sure that your code includes an example.
 
@@ -142,7 +169,7 @@ Yes, multi-condition if/else statements (`&&`, `||` and `!`) are accepted in JS 
 3. How does your programming language deal with the “dangling else” problem?
 
 JavaScript handles the ambiguity of dangling elses by analyzing the curly braces of the else and attaching it to to 
-appropriate if. Be wary of not using brackets in your single line if/elses because the ambiquity may strick again. [(Source 1)](https://en.wikipedia.org/wiki/Dangling_else)[(Source 2)](https://stackoverflow.com/questions/7117873/do-if-statements-in-javascript-require-curly-braces)
+appropriate if. Be wary of not using brackets in your single line if/elses because the ambiquity may strick again. [(Source 1)](https://en.wikipedia.org/wiki/Dangling_else) [(Source 2)](https://stackoverflow.com/questions/7117873/do-if-statements-in-javascript-require-curly-braces)
 
 4. Does your language include multiple types of loops (while, do/while, for, foreach)? If so, what are they and how 
 do they differ from each other?
@@ -159,4 +186,4 @@ Yes! See the examples above or in the PLP4-example.js code.
 6. If your language supports switch or case statements, do you have to use “break” to get out of them? Can you use “continue”
 to have all of them evaluated?
 
-Using a break is optional for each case, so if you wanted to evaluate all cases, just omit the breaks and the program will go through all of them until hitting a break or a default (which automatically has a break, whether or not you hard code one in). The use of continues as "short cuts" in switch statments is not allowed in JavaScript. [(SOurce)](https://stackoverflow.com/questions/18076238/continue-allways-illegal-in-switch-in-js-but-break-works-fine)
+Using a break is optional for each case, so if you wanted to evaluate all cases, just omit the breaks and the program will go through all of them until hitting a break or a default (which automatically has a break, whether or not you hard code one in). The use of continues as "short cuts" in switch statments is not allowed in JavaScript. [(Source)](https://stackoverflow.com/questions/18076238/continue-allways-illegal-in-switch-in-js-but-break-works-fine)
